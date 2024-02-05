@@ -35,6 +35,8 @@ Installation Steps:
 6. run `php artisan migrate` on each services
 7. make `php artisan queue:work` 
 
+The Postman collection you can find via following link: https://documenter.getpostman.com/view/580659/2s9YyweK4R
+
 # possible issues:
 - After "php artisan migrate" if error happen like: `SQLSTATE[HY000] [2002] No such file or directory` -> change DB_HOST=mysql in .env file
 - In case of `The stream or file "/var/www/storage/logs/laravel.log" could not be opened: failed to open stream: Permission denied` issue -> change permissions of services into laradock:laradock (ex. sudo chown -R laradock:laradock blog)
