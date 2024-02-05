@@ -21,7 +21,6 @@ class AppServiceProvider extends ServiceProvider
 
         // Bind the appropriate implementation based on the version
         if ($version === VersionEnum::V1->value) {
-            app()->bind(ApiInterface::class, ApiV1Service::class);
             app()->bind(PostInterface::class, PostV1Service::class);
         }
     }
