@@ -1,5 +1,6 @@
 <?php
 
+use App\Enums\API\VersionEnum;
 use App\Http\Controllers\API\V1\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -13,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-Route::group(['prefix' => 'v1'], function () {
+Route::group(['prefix' => VersionEnum::V1], function () {
     Route::post('/post', [PostController::class, 'create'])->name('post.create');
 
     Route::put('/post/{id}', [PostController::class, 'update'])
