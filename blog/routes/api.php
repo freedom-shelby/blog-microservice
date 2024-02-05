@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-Route::group(['prefix' => VersionEnum::V1], function () {
+Route::group(['prefix' => VersionEnum::V1->value], function () {
     Route::post('/post', [PostController::class, 'create'])->name('post.create');
 
     Route::put('/post/{id}', [PostController::class, 'update'])

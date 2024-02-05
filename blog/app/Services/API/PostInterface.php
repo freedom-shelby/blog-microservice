@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Services\API\Weather;
+namespace App\Services\API;
 
 use App\DTO\PostDTO;
 

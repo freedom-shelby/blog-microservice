@@ -2,5 +2,5 @@
 
 interface ApiInterface
 {
-    public function bindServices();
+
 }

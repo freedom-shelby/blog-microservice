@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Services\API\Weather\V1;
+namespace App\Services\API\V1;
 
 use App\DTO\PostDTO;
 use App\Models\Post;
-use App\Services\API\Weather\PostInterface;
+use App\Services\API\PostInterface;
 
 class PostV1Service implements PostInterface
 {

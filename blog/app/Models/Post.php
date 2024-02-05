@@ -10,4 +10,5 @@ class Post extends Model
     public const UPDATED_AT  = null;
 
     protected $dateFormat = 'U';
+    protected $fillable = ['title', 'author'];
 }
