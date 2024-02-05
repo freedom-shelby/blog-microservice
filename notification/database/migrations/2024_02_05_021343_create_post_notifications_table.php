@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('post_notifications', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->unsignedBigInteger('post_id');
+            $table->string('message');
         });
     }
 
