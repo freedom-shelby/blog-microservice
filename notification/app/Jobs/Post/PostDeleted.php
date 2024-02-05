@@ -2,6 +2,7 @@
 
 namespace App\Jobs\Post;
 
+use App\Services\PostNotificationService;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
@@ -24,5 +25,6 @@ class PostDeleted implements ShouldQueue
      */
     public function handle(): void
     {
+        app(PostNotificationService::class)->addRecord($this->data['id'], $this->data['message']);
     }
 }

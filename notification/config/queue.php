@@ -73,6 +73,8 @@ return [
 
         'rabbitmq' => [
             'driver' => 'rabbitmq',
+            'worker' => env('RABBITMQ_WORKER', 'default'),
+            'dsn' => env('RABBITMQ_DSN'),
             'hosts' => [
                 [
                     'host' => env('RABBITMQ_HOST', '127.0.0.1'),
@@ -82,7 +84,7 @@ return [
                     'vhost' => env('RABBITMQ_VHOST', '/'),
                 ],
             ],
-        ],
+        ]
     ],
 
     /*
