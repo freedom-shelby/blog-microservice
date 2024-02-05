@@ -19,10 +19,14 @@ class PostV1Service implements PostInterface
 
     public function update(PostDTO $postDTO): Post
     {
-        return Post::findOrFail($postDTO->getId())->update([
+        $post = Post::findOrFail($postDTO->getId());
+
+        $post->update([
             'title' => $postDTO->getTitle(),
             'author' => $postDTO->getAuthor(),
         ]);
+
+        return $post;
     }
 
     public function delete(int $id): bool
